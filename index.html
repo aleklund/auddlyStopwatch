@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auddly StopWatch</title>
+  <link rel="stylesheet" type="text/css" href="stopwatch.css" />
+  <script src="angular1.4.7.min.js"></script>
+  <script src="stopwatch.js"></script>
+</head>
+<body ng-app="stopwatch"> 
+
+<div id="container" ng-controller="stopwatchCtrl">
+  <div class="header">
+    <img id="auddlyLogo" src="auddly-logo.png" />
+    <span id="headerText">StopWatch</span>
+  </div>
+   
+  <div id="timerAndButtons">
+    <div id="lapCounter">
+ 	Current Lap: <span id="lapCounterNumber">{{lap}}</span>
+ 	<button class="newLap{{mode}}" ng-click="pushLap()">New Lap</button>
+ 	</div>
+    <div id="clock">{{timer | niceDisplayTime}}</div>      
+    <div>
+    <button class="{{mode}}" ng-click="toggleTimer()">{{mode}}</button>
+    <button class="reset" ng-click="reset()">Reset</button>
+    </div>
+  </div>
+      
+  <div id="resultBoard">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th width="100px">Lap</th>
+          <th width="150px">Laptime</th>
+          <th width="150px">Total time</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="item in timeSchedule.history">
+        <tr>
+          <td>{{item[0]}}</td>
+          <td>{{item[1] | niceDisplayTime}}</td>
+          <td>{{item[2] | niceDisplayTime}}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</body>
+</html>
+

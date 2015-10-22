@@ -1,0 +1,143 @@
+body {
+padding: 0;
+margin: 0;	
+}
+
+#container{
+	width: 100%;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #464644;
+}
+#clock{
+    width: 500px;
+    height: 100px;
+    border-bottom: 1px solid #454543;
+    color: #454543;
+    clear:none;
+    float:left;
+    font-size: 60pt;
+    padding-left:0px;  
+}
+
+.header {
+width: 100%;
+height: 70px;
+padding: 10px 0px 20px;
+font-size: 40px;
+font-weight: bold;
+border-bottom: 1px solid #CBDD3B;
+margin-bottom: 20px;	
+}
+
+#auddlyLogo {
+height: 70px;
+width: auto;
+margin: 0 auto;	
+}
+
+#timerAndButtons {
+float: left;
+margin-right: 30px;	
+}
+
+#lapCounter {
+color: #454543;
+font-size: 20px;
+font-weight: bold;	
+}
+
+#lapCounterNumber {
+color: #CEDE3E;
+font-size: 30px;
+font-weight: bold;	
+}
+
+#resultBoard {
+float: left;
+padding-left: 10px; 	
+}
+
+a{
+    display:inline-block;
+    padding:8px;
+    border-radius: 5px;
+    border:1px solid #DDD;
+    color:white;
+    background-color: #ff3300;
+}
+
+.Start, .Stop, .reset, .newLapStart, .newLapStop {
+	float:left;
+	margin: 0px;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-bottom-left-radius: 5px;
+    font-weight: bold;
+    color: #454543;
+}
+
+.newLapStart {
+	float: right;
+	background: #464644;
+	color: #fff;
+	border-radius: 5px;
+	opacity: 0.5;
+}
+
+.newLapStop {
+	float: right;
+	background: #464644;
+	color: #fff;
+	border-radius: 5px;
+	opacity: 1;
+}
+
+.Stop:hover, .Start:hover, .reset:hover, .newLapStop:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.Start {
+    background: #CDE03C;
+}
+
+.Stop {
+    background: #C04FA2;
+    color: #fff;
+}
+
+.reset {
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 0px;
+	background: #EFF0EF;
+}
+
+.timeExplain {
+	font-size: 15px;
+	font-weight: bold;
+}
+
+.timeExplainHighlight {
+	font-size: 20px;
+	color: #CDE03C;
+}
+
+table {
+    width:400px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+}
+
+th {
+    background-color: #EFF0EF;
+    margin: 0px;
+    padding: 3px;
+}
+
+td {
+    padding: 10px 0px 5px;
+    border-bottom: 1px solid #464644;
+    text-align: center;
+}
